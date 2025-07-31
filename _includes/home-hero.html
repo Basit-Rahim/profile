@@ -8,6 +8,11 @@
 
         <div class="hero-content">
 
+          <!-- Profile Image -->
+          <div class="profile-image-container text-center">
+            <img src="{{ site.baseurl }}/img/profile_photo.jpg" alt="Basit Rahim" class="profile-image">
+          </div>
+
           {% if site.title != '' %}
           <h1 class="text-center">{{site.title}}</h1>
           {% endif %}
@@ -34,7 +39,7 @@
               <a href="https://github.com/{{ site.github_username }}"><button class="btn btn-default btn-lg"><i class="fa fa-github fa-lg"></i>Github</button></a>
             {% endif %}
             {% if site.medium_username != '' %}
-              <a href="https://{{ site.medium_username }}"><button class="btn btn-default btn-lg"><i class="fa fa-medium fa-lg"></i>Medium</button></a>
+              <a href="https://www.linkedin.com/in/basit-rahim-139730154/"><button class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-lg"></i>LinkedIn</button></a>
             {% endif %}
 
           </div>
