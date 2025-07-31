@@ -13,14 +13,14 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: "Hello. I'm Jami Gibbs."
-email: 'jami0821@gmail.com'
-description: "I'm a software developer and designer from Chicago creating useful things for the web."
+title: "Hello. I'm Basit Rahim."
+email: 'basitrahim66@gmail.com'
+description: "I'm a software Engineer and designer from Gilgit, Pakistan."
 url: "https://basit-rahim.github.io"   # No trailing slash
 baseurl: "/profile"                    # The repo name, with leading slash
-twitter_username: 'jamigibbs'
-github_username: 'jamigibbs'
-medium_username: 'blog.jamigibbs.com'
+twitter_username: 'BasitRahim66'
+github_username: 'Basit-Rahim'
+Linkedin: 'Basit Rahim'
 
 # Build settings
 markdown: kramdown
