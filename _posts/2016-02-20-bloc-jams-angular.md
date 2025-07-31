@@ -2,7 +2,7 @@
 layout: inner
 position: right
 title: 'Bloc Jams Angular'
-date: 2016-02-20 14:15:00
+date: 2016-02-20 15:56:00
 categories: development
 tags: JavaScript AngularJS Sass Grunt
 featured_image: '/img/posts/01_bloc-jams-angular-1130x864-2x.png'

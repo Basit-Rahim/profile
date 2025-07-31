@@ -16,7 +16,7 @@
 title: "Hello. I'm Jami Gibbs."
 email: 'jami0821@gmail.com'
 description: "I'm a software developer and designer from Chicago creating useful things for the web."
-url: "https://basit-rahim.github.io/profile"   # No trailing slash
+url: "https://basit-rahim.github.io"   # No trailing slash
 baseurl: "/profile"                    # The repo name, with leading slash
 twitter_username: 'jamigibbs'
 github_username: 'jamigibbs'
