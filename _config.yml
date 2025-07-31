@@ -14,12 +14,13 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: "Hello. I'm Basit Rahim."
-email: 'basitrahim66@gmail.com'
-description: "I'm a software Engineer and designer from Gilgit, Pakistan."
+email: 'jami0821@gmail.com'
+description: "I'm a software developer and designer from Chicago creating useful things for the web."
 url: "https://basit-rahim.github.io"   # No trailing slash
 baseurl: "/profile"                    # The repo name, with leading slash
 twitter_username: 'BasitRahim66'
 github_username: 'Basit-Rahim'
+medium_username: 'blog.jamigibbs.com'
 Linkedin: 'Basit Rahim'
 
 # Build settings
@@ -92,8 +93,8 @@ pagination:
 ############################################################
 
 ### Phantom settings
-footer_text: '© 2018 Jami Gibbs'
-admin_name: 'Jami Gibbs'
+footer_text: '© 2024 Basit Rahim'
+admin_name: 'Basit Rahim'
 google_analytics: "UA-9999999-99" # Update with your own tracking ID
 enable_contact: false
 
