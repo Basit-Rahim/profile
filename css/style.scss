@@ -175,16 +175,16 @@ button.btn, input.btn {
   }
 }
 
-/* Resume Link */
-.resume-link {
-  color: #FF5B33;
-  font-weight: 600;
-  font-size: 1em;
+/* CV Download Button */
+button.btn.btn-cv {
+  background: linear-gradient(135deg, #FF7B7B, #FF5B33);
+  color: #fff;
+  border: none;
   &:hover {
-    color: #FF7B7B;
-  }
-  i {
-    margin-right: 0.3em;
+    background: linear-gradient(135deg, #FF5B33, #e04520);
+    color: #fff;
+    border: none;
+    box-shadow: 0 3px 10px rgba(255, 91, 51, 0.3);
   }
 }
 
