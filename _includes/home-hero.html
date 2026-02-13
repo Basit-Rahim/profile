@@ -29,14 +29,9 @@
           </p>
           {% endif %}
 
-          <!-- Resume Download -->
-          <div class="text-center" style="margin-bottom: 1em;">
-            <a href="{{ site.baseurl }}/Basit_Resume_CV.pdf" target="_blank" class="resume-link">
-              <i class="fa fa-file-pdf-o"></i> Download Resume
-            </a>
-          </div>
-
           <div class="hero-buttons">
+
+            <a href="{{ site.baseurl }}/Basit_Resume_CV.pdf" target="_blank"><button class="btn btn-cv btn-lg"><i class="fa fa-download fa-lg"></i>Download CV</button></a>
 
             {% if site.twitter_username != '' %}
               <a href="https://twitter.com/{{ site.twitter_username }}"><button class="btn btn-default btn-lg"><i class="fa fa-twitter fa-lg"></i>Twitter</button></a>
