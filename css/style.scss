@@ -18,7 +18,9 @@
 @import '../_sass/mixins';
 
 $primary: #0a0a0a;
-$secondary: #FF7B7B;
+$secondary: #34d399;
+$accent: #10b981;
+$accent-dark: #059669;
 
 %opensans { font-family: 'Open Sans', sans-serif; }
 %merriweather { font-family: 'Merriweather', serif; }
@@ -56,7 +58,7 @@ p {
 a {
   @include transition(color .2s ease-in-out);
   &:hover {
-    color: #FF5B33;
+    color: $accent;
     text-decoration: none;
   }
 }
@@ -157,7 +159,7 @@ button.btn, input.btn {
   margin: 0.5em 0 0.5em 0;
   .badge-highlight {
     display: inline-block;
-    background: linear-gradient(135deg, #FF7B7B, #FF5B33);
+    background: linear-gradient(135deg, $secondary, $accent);
     color: white;
     padding: 0.4em 1.2em;
     border-radius: 25px;
@@ -177,14 +179,14 @@ button.btn, input.btn {
 
 /* CV Download Button */
 button.btn.btn-cv {
-  background: linear-gradient(135deg, #FF7B7B, #FF5B33);
+  background: linear-gradient(135deg, $secondary, $accent);
   color: #fff;
   border: none;
   &:hover {
-    background: linear-gradient(135deg, #FF5B33, #e04520);
+    background: linear-gradient(135deg, $accent, $accent-dark);
     color: #fff;
     border: none;
-    box-shadow: 0 3px 10px rgba(255, 91, 51, 0.3);
+    box-shadow: 0 3px 10px rgba(16, 185, 129, 0.35);
   }
 }
 
@@ -288,7 +290,7 @@ button.btn.btn-cv {
 .section-line {
   width: 60px;
   height: 3px;
-  background: linear-gradient(135deg, #FF7B7B, #FF5B33);
+  background: linear-gradient(135deg, $secondary, $accent);
   margin: 0 auto 3em auto;
   border-radius: 2px;
 }
@@ -338,16 +340,16 @@ button.btn.btn-cv {
 
 /* Featured Role (RA) */
 .featured-role {
-  border-left-color: #FF5B33;
+  border-left-color: $accent;
   .timeline-badge {
-    border-color: #FF5B33;
-    color: #FF5B33;
-    background: #fff5f3;
+    border-color: $accent;
+    color: $accent;
+    background: #ecfdf5;
   }
   .timeline-content {
-    border-color: #FF5B33;
-    border-left: 4px solid #FF5B33;
-    box-shadow: 0 4px 15px rgba(255, 91, 51, 0.1);
+    border-color: $accent;
+    border-left: 4px solid $accent;
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.1);
   }
 }
 
@@ -361,7 +363,7 @@ button.btn.btn-cv {
   .company {
     display: block;
     font-size: 1.05em;
-    color: #FF5B33;
+    color: $accent;
     font-weight: 600;
     @extend %opensans;
   }
@@ -376,7 +378,7 @@ button.btn.btn-cv {
 
 .current-badge {
   display: inline-block;
-  background: #FF5B33;
+  background: $accent;
   color: #fff;
   font-size: 0.5em;
   padding: 0.2em 0.8em;
@@ -445,12 +447,12 @@ button.btn.btn-cv {
 }
 
 .featured-project {
-  border-left: 4px solid #FF5B33;
+  border-left: 4px solid $accent;
 }
 
 .project-icon {
   font-size: 2em;
-  color: #FF5B33;
+  color: $accent;
 }
 
 .project-links {
@@ -472,7 +474,7 @@ button.btn.btn-cv {
   border: 1px solid #e8ecf1;
   border-radius: 8px;
   padding: 2.5em;
-  border-left: 4px solid #FF5B33;
+  border-left: 4px solid $accent;
   @include bp-xsmall {
     flex-direction: column;
     padding: 1.5em;
@@ -481,7 +483,7 @@ button.btn.btn-cv {
 
 .edu-icon {
   font-size: 3em;
-  color: #FF5B33;
+  color: $accent;
   margin-right: 1.5em;
   @include bp-xsmall {
     margin-bottom: 0.5em;
@@ -510,9 +512,9 @@ button.btn.btn-cv {
 .edu-highlights {
   .highlight-badge {
     display: inline-block;
-    background: linear-gradient(135deg, #fff5f3, #fff);
-    border: 1px solid #ffd6cc;
-    color: #c44d2b;
+    background: linear-gradient(135deg, #ecfdf5, #fff);
+    border: 1px solid #a7f3d0;
+    color: #047857;
     padding: 0.4em 1em;
     border-radius: 20px;
     font-size: 0.85em;
@@ -521,7 +523,7 @@ button.btn.btn-cv {
     font-weight: 600;
     i {
       margin-right: 0.3em;
-      color: #FF5B33;
+      color: $accent;
     }
   }
 }
@@ -551,7 +553,7 @@ button.btn.btn-cv {
     @extend %opensans;
     font-weight: 700;
     i {
-      color: #FF5B33;
+      color: $accent;
       margin-right: 0.5em;
     }
   }
@@ -570,7 +572,7 @@ button.btn.btn-cv {
     font-weight: 600;
     transition: background 0.2s ease, color 0.2s ease;
     &:hover {
-      background: #FF5B33;
+      background: $accent;
       color: #fff;
     }
   }
