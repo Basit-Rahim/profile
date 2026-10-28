@@ -8,18 +8,18 @@ permalink: /about/
 
 I'm **Basit Rahim**, a Computer Science graduate from the **Lahore University of Management Sciences (LUMS)**, where I graduated with Distinction and was on the Dean's Honor List for three consecutive years.
 
-I'm currently a **Research Associate at PAMS (Pakistan Alliance for Maths and Science)**, where I design agent-based modeling frameworks to investigate student dropout in Pakistan and simulate policy interventions for government stakeholders. I collaborate with CITY @ LUMS on GIS-based spatial analysis and work at the intersection of computational social science, education research, and data-driven policy design.
+I'm currently an **AI Researcher at DARE-RC**, where I design agent-based modeling frameworks to investigate student dropout in Pakistan and simulate policy interventions for government stakeholders. I collaborate with CITY @ LUMS on GIS-based spatial analysis and work at the intersection of computational social science, education research, and data-driven policy design.
 
 ---
 
 ## Professional Background
 
-**Research Associate** &mdash; PAMS *(June 2025 &ndash; Present)*
+**AI Researcher** &mdash; DARE-RC *(Aug 2025 &ndash; Present)*
 - Agent-based modeling for education policy research
 - GIS mapping and spatial analysis with CITY @ LUMS
 - Large-scale data collection and survey design
 
-**AI Engineer** &mdash; ShipIn *(June 2024 &ndash; June 2025)*
+**AI Engineer** &mdash; ShipIn *(July 2024 &ndash; Aug 2025)*
 - Scalable backend systems with Rust for edge AI platforms
 - Real-time data pipelines and database optimization
 

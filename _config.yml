@@ -11,7 +11,7 @@
 # Site settings
 title: "Hello. I'm Basit Rahim."
 email: 'basitrahim66@gmail.com'
-description: "Research Associate at PAMS (Pakistan Alliance for Maths and Science), working on agent-based modeling and computational social science to investigate education policy in Pakistan. CS graduate from LUMS with Distinction. Previously AI Engineer at ShipIn, Python & Data Engineer at Turing, and Software Engineer at SSI — building scalable systems in Rust, training LLMs with RLHF, and engineering robust APIs."
+description: "AI Researcher at DARE-RC, working on agent-based modeling and computational social science to investigate education policy in Pakistan. CS graduate from LUMS with Distinction. Previously AI Engineer at ShipIn, Python & Data Engineer at Turing, and Software Engineer at SSI — building scalable systems in Rust, training LLMs with RLHF, and engineering robust APIs."
 url: "https://basit-rahim.github.io"   # No trailing slash
 baseurl: "/profile"                    # The repo name, with leading slash
 twitter_username: 'BasitRahim66'
@@ -86,7 +86,7 @@ pagination:
 ############################################################
 
 ### Phantom settings
-footer_text: '&copy; 2025 Basit Rahim'
+footer_text: '&copy; 2026 Basit Rahim'
 admin_name: 'Basit Rahim'
 google_analytics: "UA-9999999-99" # Update with your own tracking ID
 enable_contact: false
