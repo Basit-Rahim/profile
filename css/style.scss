@@ -116,7 +116,7 @@ button.btn, input.btn {
 --------------------------------------------------------------*/
 .hero {
   position: relative;
-  padding: 7em 0 2em;
+  padding: 6em 0 2em;
   overflow: hidden;
   background:
     radial-gradient(circle at 85% 20%, rgba(52, 211, 153, 0.16), transparent 45%),
@@ -128,6 +128,12 @@ button.btn, input.btn {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  &:before, &:after { display: none; }
+  > div { width: 100%; }
+  @media (min-width: 992px) {
+    > .hero-text { width: 66.6667%; }
+    > .hero-visual { width: 33.3333%; }
+  }
 }
 
 .hero-text {
@@ -188,7 +194,7 @@ button.btn, input.btn {
   font-weight: 600;
   max-width: 34em;
   @include bp-small { margin: 0 auto 0.8em; }
-  @include bp-xsmall { font-size: 1.2em; margin: 0 auto 0.8em; }
+  @include bp-xsmall { font-size: 1.15em; margin: 0 auto 0.8em; }
   mark {
     background: linear-gradient(transparent 62%, rgba(52, 211, 153, 0.45) 62%);
     color: inherit;
@@ -198,6 +204,7 @@ button.btn, input.btn {
 
 .hero-sub {
   font-size: 1.05em;
+  @include bp-xsmall { font-size: 1em; text-align: left; }
   line-height: 1.75;
   color: #546E7A;
   max-width: 38em;
@@ -264,59 +271,45 @@ button.btn, input.btn {
 
 .hero-visual {
   text-align: center;
-  @include bp-small { margin-top: 3em; }
-  @include bp-xsmall { margin-top: 3em; }
+  @include bp-small { order: -1; margin-bottom: 1.5em; }
+  @include bp-xsmall { order: -1; margin-bottom: 1.2em; }
 }
 
 .portrait-wrap {
   position: relative;
   display: inline-block;
-  max-width: 380px;
   width: 100%;
-  @include bp-small { max-width: 280px; }
-  @include bp-xsmall { max-width: 240px; }
-  &:before {
-    content: "";
-    position: absolute;
-    inset: -14px;
-    border-radius: 50%;
-    background: conic-gradient(from 160deg, $secondary, #a7f3d0, $accent-dark, $secondary);
-    opacity: 0.85;
-    z-index: 0;
-  }
+  max-width: 220px;
+  @include bp-small { max-width: 130px; }
+  @include bp-xsmall { max-width: 110px; }
 }
 
 .portrait {
-  position: relative;
-  z-index: 1;
   width: 100%;
   height: auto;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 50%;
-  border: 6px solid #fff;
-  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.18);
+  border: 4px solid #fff;
+  box-shadow: 0 0 0 3px $secondary, 0 14px 32px rgba(15, 23, 42, 0.16);
 }
 
 .float-badge {
   position: absolute;
-  z-index: 2;
   background: #fff;
   color: #1f2937;
   font-weight: 700;
-  font-size: 0.85em;
-  padding: 0.6em 1em;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.14);
+  font-size: 0.78em;
+  padding: 0.45em 0.8em;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
   white-space: nowrap;
-  i { color: $accent; margin-right: 0.4em; }
+  i { color: $accent; margin-right: 0.35em; }
+  @include bp-small { display: none; }
+  @include bp-xsmall { display: none; }
 }
-.badge-top { top: 8%; left: -8%; }
-.badge-bottom { bottom: 6%; right: -6%; }
-@media (max-width: 480px) {
-  .badge-top { left: 0; }
-  .badge-bottom { right: 0; }
-}
+.badge-top { top: 2%; left: -38%; }
+.badge-bottom { bottom: 2%; right: -38%; }
 
 .hero-stats {
   display: grid;
