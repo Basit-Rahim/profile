@@ -118,6 +118,33 @@
             <h2 class="section-heading text-center">Projects</h2>
             <div class="section-line"></div>
 
+            <!-- Case studies: one page per project in _projects/ -->
+            <h3 class="projects-subheading text-center">Research &amp; engineering case studies</h3>
+            <div class="row project-grid">
+              {% assign case_studies = site.projects | sort: 'order' %}
+              {% for p in case_studies %}
+              <div class="col-sm-6 wow fadeInUp">
+                <a class="project-card-link" href="{{ site.baseurl }}{{ p.url }}">
+                  <div class="project-card featured-project">
+                    <div class="project-thumb">
+                      <img src="{{ site.baseurl }}/img/projects/{{ p.slug }}/thumb.jpg" alt="{{ p.image_alt | escape }}" loading="lazy">
+                    </div>
+                    <div class="project-card-body">
+                      <span class="project-domain"><i class="fa {{ p.icon }}"></i> {{ p.domain }}</span>
+                      <h3>{{ p.title }}</h3>
+                      <p>{{ p.summary }}</p>
+                      <div class="role-tags">
+                        {% for t in p.tags limit: 4 %}<span>{{ t }}</span>{% endfor %}
+                      </div>
+                      <span class="read-more">Read the case study<i class="fa fa-arrow-right"></i></span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              {% endfor %}
+            </div>
+
+            <h3 class="projects-subheading text-center">More projects</h3>
             <div class="row project-grid">
 
               <!-- Equity Equation Project -->

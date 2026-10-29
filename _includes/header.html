@@ -1,10 +1,11 @@
 <!doctype html>
+<html lang="en">
 <head>
 
   <!-- Meta -->
   <meta charset="utf-8">
 
-  <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% elsif post.title %}{{ post.title }} - {{ site.title }}{% else %}{{ site.title }} - {{ site.description }}{% endif %}</title>
+{% include seo.html %}
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta content="yes" name="apple-mobile-web-app-capable">
@@ -41,13 +42,13 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="/">{{ site.admin_name }}</a>
+              <a class="navbar-brand" href="{{ site.baseurl }}/">{{ site.admin_name }}</a>
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
               {% for item in site.nav_item %}
                 <li>
-                  <a href="{{ item.url }}">{{ item.text }}</a>
+                  <a href="{{ site.baseurl }}{{ item.url }}">{{ item.text }}</a>
                 </li>
               {% endfor %}
             </ul>

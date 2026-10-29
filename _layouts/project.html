@@ -1,0 +1,106 @@
+{% include header.html %}
+
+  {% assign img_dir = site.baseurl | append: '/img/projects/' | append: page.slug | append: '/' %}
+
+  <article class="project-page" itemscope itemtype="https://schema.org/SoftwareSourceCode">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+
+          <nav class="project-breadcrumb" aria-label="Breadcrumb">
+            <a href="{{ site.baseurl }}/">Home</a>
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+            <a href="{{ site.baseurl }}/#projects">Projects</a>
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+            <span>{{ page.short_title | default: page.title }}</span>
+          </nav>
+
+          <header class="project-header">
+            <p class="project-kicker"><i class="fa {{ page.icon }}" aria-hidden="true"></i> {{ page.domain }}</p>
+            <h1 itemprop="name">{{ page.title }}</h1>
+            <p class="project-tagline" itemprop="description">{{ page.tagline }}</p>
+
+            <ul class="project-meta">
+              <li><span>Role</span>{{ page.role }}</li>
+              <li><span>Year</span>{{ page.year }}</li>
+              <li><span>Stack</span>{{ page.languages | join: ' · ' }}</li>
+            </ul>
+
+            <div class="project-actions">
+              {% if page.github %}<a class="btn-project" href="{{ page.github }}" target="_blank" rel="noopener" itemprop="codeRepository"><i class="fa fa-github"></i> Source code</a>{% endif %}
+              {% if page.live %}<a class="btn-project btn-project-ghost" href="{{ page.live }}" target="_blank" rel="noopener"><i class="fa fa-external-link"></i> Live demo</a>{% endif %}
+            </div>
+          </header>
+
+          <figure class="project-hero">
+            <img src="{{ img_dir }}hero.jpg" alt="{{ page.image_alt | escape }}" width="1400" itemprop="image">
+            <figcaption>{{ page.caption }}</figcaption>
+          </figure>
+
+          {% if page.metrics %}
+          <div class="project-metrics">
+            {% for m in page.metrics %}
+            <div class="metric">
+              <strong>{{ m.value }}</strong>
+              <span>{{ m.label }}</span>
+            </div>
+            {% endfor %}
+          </div>
+          {% endif %}
+
+          <div class="project-body">
+            {{ content }}
+          </div>
+
+          {% if page.gallery %}
+          <section class="project-gallery">
+            <h2>Inside the project</h2>
+            {% for g in page.gallery %}
+            <figure>
+              <img src="{{ img_dir }}{{ g.file }}" alt="{{ g.alt | escape }}" loading="lazy">
+              <figcaption>
+                <strong>{{ g.title }}</strong>
+                {{ g.text }}
+              </figcaption>
+            </figure>
+            {% endfor %}
+          </section>
+          {% endif %}
+
+          <section class="project-stack">
+            <h2>Tech stack</h2>
+            <div class="role-tags">
+              {% for t in page.tags %}<span>{{ t }}</span>{% endfor %}
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <section class="cv-section cv-section-alt more-projects">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <h2 class="section-heading text-center">More projects</h2>
+          <div class="section-line"></div>
+          <div class="row">
+            {% assign others = site.projects | sort: 'order' %}
+            {% for p in others %}{% if p.url != page.url %}
+            <div class="col-sm-6 col-md-3">
+              <a class="mini-project" href="{{ site.baseurl }}{{ p.url }}">
+                <img src="{{ site.baseurl }}/img/projects/{{ p.slug }}/thumb.jpg" alt="{{ p.image_alt | escape }}" loading="lazy">
+                <span class="mini-domain">{{ p.domain }}</span>
+                <strong>{{ p.short_title | default: p.title }}</strong>
+              </a>
+            </div>
+            {% endif %}{% endfor %}
+          </div>
+          <p class="text-center"><a class="all-projects" href="{{ site.baseurl }}/#projects"><i class="fa fa-th-large"></i> All projects</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% include footer.html %}

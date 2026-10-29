@@ -18,6 +18,34 @@ twitter_username: 'BasitRahim66'
 github_username: 'Basit-Rahim'
 linkedin_url: 'https://www.linkedin.com/in/basit-rahim-139730154/'
 
+# SEO
+author: 'Basit Rahim'
+job_title: 'AI Researcher'
+seo_keywords: 'Basit Rahim, AI Researcher, Machine Learning Engineer, LUMS, DARE-RC, computational social science, education policy Pakistan, LLM, Python, FastAPI, research software'
+
+# Project case studies: one page per project at /projects/<name>/
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+
+exclude:
+  - README.md
+  - CHANGELOG.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - phantom.gemspec
+  - preview.jpg
+  - vendor
+
 # Build settings
 markdown: kramdown
 # theme: phantom # Uncomment once published to RubyGems

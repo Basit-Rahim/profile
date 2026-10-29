@@ -421,6 +421,14 @@ button.btn.btn-cv {
 /* Project Cards */
 .project-grid {
   margin-top: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  &:before, &:after { display: none; }
+  > [class*="col-"] {
+    display: flex;
+    flex-direction: column;
+    > .project-card, > .project-card-link { flex: 1; }
+  }
 }
 
 .project-card {
@@ -464,6 +472,281 @@ button.btn.btn-cv {
     i {
       margin-right: 0.3em;
     }
+  }
+}
+
+/* Clickable project cards with a screenshot (link to a case-study page) */
+a.project-card-link {
+  display: flex;
+  margin-bottom: 2em;
+  color: inherit;
+  &:hover, &:focus {
+    color: inherit;
+    text-decoration: none;
+    h3 { color: $accent-dark; }
+    .project-thumb img { transform: scale(1.03); }
+  }
+  .project-card {
+    flex: 1;
+    padding: 0;
+    margin-bottom: 0;
+    overflow: hidden;
+  }
+  .project-card-body {
+    padding: 1.4em 1.6em 1.6em;
+  }
+  .project-domain {
+    font-size: 0.75em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $accent;
+  }
+  .read-more {
+    display: inline-block;
+    margin-top: 0.8em;
+    font-weight: 600;
+    font-size: 0.9em;
+    color: $accent-dark;
+    i { margin-left: 0.3em; }
+  }
+}
+
+.project-thumb {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #f1f5f9;
+  border-bottom: 1px solid #e8ecf1;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top left;
+    transition: transform 0.3s ease;
+  }
+}
+
+.projects-subheading {
+  font-size: 1.15em;
+  color: #607D8B;
+  margin: 1.5em 0 1em;
+  @extend %opensans;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/*--------------------------------------------------------------
+	2.6 Project case-study pages
+--------------------------------------------------------------*/
+.project-page {
+  margin: 6em 0 3em;
+  @include bp-xsmall { margin-top: 5em; }
+}
+
+.project-breadcrumb {
+  font-size: 0.9em;
+  color: #90a4ae;
+  margin-bottom: 2em;
+  a { color: #607D8B; }
+  i { margin: 0 0.5em; }
+}
+
+.project-header {
+  h1 {
+    font-size: 2.6em;
+    line-height: 1.25;
+    margin: 0.2em 0 0.4em;
+    color: $primary;
+    @include bp-xsmall { font-size: 1.9em; }
+  }
+}
+
+.project-kicker {
+  font-size: 0.85em;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: $accent;
+  margin: 0;
+  i { margin-right: 0.3em; }
+}
+
+.project-tagline {
+  font-size: 1.25em;
+  color: #546E7A;
+  line-height: 1.7;
+}
+
+.project-meta {
+  list-style: none;
+  padding: 0;
+  margin: 1.5em 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8em 2.5em;
+  li {
+    color: #37474F;
+    font-weight: 600;
+    font-size: 0.95em;
+  }
+  span {
+    display: block;
+    font-size: 0.75em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #90a4ae;
+  }
+}
+
+.project-actions {
+  margin-bottom: 2.5em;
+}
+
+.btn-project {
+  display: inline-block;
+  padding: 10px 22px;
+  margin: 0 0.6em 0.6em 0;
+  border-radius: 4px;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, $secondary, $accent);
+  i { margin-right: 0.4em; }
+  &:hover, &:focus {
+    color: #fff;
+    background: linear-gradient(135deg, $accent, $accent-dark);
+    box-shadow: 0 3px 10px rgba(16, 185, 129, 0.35);
+  }
+}
+
+.btn-project-ghost {
+  background: #fff;
+  color: #2E4453;
+  border: 1px solid #d5e0e7;
+  &:hover, &:focus {
+    background: #fff;
+    color: $accent-dark;
+  }
+}
+
+.project-hero, .project-gallery figure {
+  margin: 0 0 2.5em;
+  img {
+    border-radius: 8px;
+    border: 1px solid #e0e6ed;
+    box-shadow: 0 12px 35px rgba(15, 23, 42, 0.10);
+    height: auto;
+  }
+  figcaption {
+    margin-top: 0.9em;
+    font-size: 0.95em;
+    line-height: 1.7;
+    color: #607D8B;
+    strong {
+      display: block;
+      color: $primary;
+      font-size: 1.1em;
+      margin-bottom: 0.2em;
+    }
+  }
+}
+
+.project-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1em;
+  margin: 0 0 3em;
+  .metric {
+    background: #f7f9fb;
+    border: 1px solid #e8ecf1;
+    border-left: 4px solid $accent;
+    border-radius: 8px;
+    padding: 1em 1.2em;
+  }
+  strong {
+    display: block;
+    font-size: 1.7em;
+    @extend %merriweather;
+    color: $primary;
+    line-height: 1.2;
+  }
+  span {
+    font-size: 0.85em;
+    color: #607D8B;
+    line-height: 1.5;
+  }
+}
+
+.project-body {
+  h2 {
+    font-size: 1.6em;
+    margin: 1.8em 0 0.6em;
+    color: $primary;
+  }
+  p, li {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #37474F;
+  }
+  ul, ol { padding-left: 1.3em; margin-bottom: 1.4em; }
+  li { margin-bottom: 0.4em; }
+  table {
+    width: 100%;
+    margin: 1em 0 2em;
+    font-size: 0.95em;
+    border-collapse: collapse;
+    th, td { padding: 0.6em 0.8em; border-bottom: 1px solid #e8ecf1; text-align: left; }
+    th { color: #607D8B; font-size: 0.85em; text-transform: uppercase; letter-spacing: 0.5px; }
+  }
+  blockquote {
+    border-left: 4px solid $accent;
+    background: #ecfdf5;
+    padding: 1em 1.4em;
+    margin: 1.5em 0;
+    p { margin: 0; font-size: 1.05em; }
+  }
+}
+
+.project-gallery, .project-stack {
+  h2 {
+    font-size: 1.6em;
+    margin: 1.8em 0 1em;
+    color: $primary;
+  }
+}
+
+.more-projects {
+  .mini-project {
+    display: block;
+    margin-bottom: 2em;
+    color: $primary;
+    img {
+      border-radius: 6px;
+      border: 1px solid #e0e6ed;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      object-position: top left;
+      margin-bottom: 0.7em;
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
+    }
+    .mini-domain {
+      display: block;
+      font-size: 0.72em;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: $accent;
+    }
+    strong { font-size: 1em; line-height: 1.4; }
+    &:hover img {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+    }
+  }
+  .all-projects {
+    font-weight: 600;
+    i { margin-right: 0.4em; }
   }
 }
 
