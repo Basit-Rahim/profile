@@ -1,7 +1,7 @@
 {% capture seo_title %}{% if page.title %}{{ page.seo_title | default: page.title }} | {{ site.author }}{% else %}{{ site.author }} | AI Researcher &amp; Machine Learning Engineer{% endif %}{% endcapture %}
 {% assign seo_description = page.description | default: site.description | strip_html | strip_newlines | truncate: 300 %}
 {% assign seo_url = page.url | replace: 'index.html', '' | prepend: site.baseurl | prepend: site.url %}
-{% assign seo_image = page.image | default: '/img/profile_photo.jpg' | prepend: site.baseurl | prepend: site.url %}
+{% assign seo_image = page.image | default: '/img/portrait.jpg' | prepend: site.baseurl | prepend: site.url %}
   <title>{{ seo_title | strip }}</title>
   <meta name="description" content="{{ seo_description | escape }}">
   <meta name="author" content="{{ site.author }}">
@@ -47,6 +47,13 @@
     ]
   }]
   {% else %}
+  [{
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": {{ site.author | jsonify }},
+    "alternateName": ["Basit Rahim Portfolio", "Basit Rahim - AI Researcher"],
+    "url": {{ site.url | append: site.baseurl | append: '/' | jsonify }}
+  },
   {
     "@context": "https://schema.org",
     "@type": "Person",
@@ -63,6 +70,6 @@
       {{ site.linkedin_url | jsonify }},
       "https://twitter.com/{{ site.twitter_username }}"
     ]
-  }
+  }]
   {% endif %}
   </script>
